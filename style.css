@@ -1,0 +1,68 @@
+* {
+   
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  body{
+    background-color: #333;
+  }
+  .titulo{
+    text-align: center;
+  }
+  .envelope {
+    background-color: #cb4444;
+    border: 5px solid #333;
+    box-shadow: 2px 2px 6px #b74a4a;
+    margin: 50px auto;
+    max-width: 5000px;
+    position: relative;
+    height: 0;
+    overflow: hidden;
+  }
+  
+  .envelope .flap {
+    background-color: #df5454;
+    height: 150px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+  }
+  
+  .envelope .flap.top {
+    transform-origin: bottom;
+    transform: rotateX(45deg);
+  }
+  
+  .envelope .flap.bottom {
+    transform-origin: top;
+    transform: rotateX(-45deg);
+  }
+  
+  .envelope .letter {
+    background-image: url("paper.png");
+    background-repeat: no-repeat;
+    color: #333;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    height: 100%;
+    padding: 20px;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .envelope .letter h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .envelope .letter p {
+    margin-bottom: 10px;
+  }
+  
+  .envelope.open {
+    height: 1920px;
+    transition: height 1s;
+  }
+  
